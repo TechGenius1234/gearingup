@@ -102,8 +102,9 @@
   </div>
 </body>
 <script>
-  <script>
-  const query = window.location.search; // This gets the "?vsd=hsfdsusdih" part
+  const params = new URLSearchParams(window.location.search);
+  const header = params.get("header");
+  const footer = params.get("footer");
   document.getElementById("header").textContent = header;
   document.getElementById("footer").textContent = footer;
 </script>
