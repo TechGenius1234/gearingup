@@ -102,8 +102,18 @@
   </div>
 </body>
 <script>
-  alert("Please Full screen the page and zoom in using (1/2)")
-  alert("CTRL&+ or CTRL&- Have fun :)")
+  let alertMsg = `
+  Welcome to the Varible Message Board!
+  This was community built and the base was made by
+  TechGenius1234! Please note that this program/website is open sourced
+  and that the changes made is moderated for safety and to keep this free of viruses
+  I really hope you enjoy and please note that you can open a ticket on this repo by going to
+  https://github.com/TechGenius1234/gearingup/issues.
+  
+  Hope you enjoy!
+  -TechGenius1234
+  `
+  alert(alertMsg)
   const params = new URLSearchParams(window.location.search);
   const header = params.get("header");
   const footer = params.get("footer");
