@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Future</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+      color: #00ffe1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+    }
+
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 255, 225, 0.2);
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 15px rgba(0, 255, 225, 0.2);
+      max-width: 600px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .glass-panel:hover {
+      transform: scale(1.02);
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: transparent;
+      color: #00ffe1;
+      border: 2px solid #00ffe1;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      background: rgba(0, 255, 225, 0.2);
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      transition: transform 0.4s ease;
+      z-index: 0;
+    }
+
+    .btn:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn:hover {
+      background: rgba(0, 255, 225, 0.1);
+      box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class=glass-panel>
+    <h1 id=header></h1>
+    <p id=footer></p>
+  </div>
+</body>
+<script>
+  <script>
+  const query = window.location.search; // This gets the "?vsd=hsfdsusdih" part
+  document.getElementById("header").textContent = header;
+  document.getElementById("footer").textContent = footer;
+</script>
+</script>
+</html>
